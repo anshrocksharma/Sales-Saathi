@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+  <title>SalesSaathi - Executive Retail Intelligence Platform</title>
+  
+  <!-- Typography & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="./css/custom.css"/>
+
+  <!-- Tailwind CSS Configuration matching DESIGN.md & Stitch Specs -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#f8f9ff",
+            "surface-dim": "#cbdbf5",
+            "surface-bright": "#f8f9ff",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#eff4ff",
+            "surface-container": "#e5eeff",
+            "surface-container-high": "#dce9ff",
+            "surface-container-highest": "#d3e4fe",
+            "on-surface": "#0b1c30",
+            "on-surface-variant": "#45464c",
+            "inverse-surface": "#213145",
+            "inverse-on-surface": "#eaf1ff",
+            "outline": "#76777d",
+            "outline-variant": "#c6c6cd",
+            "surface-tint": "#575e70",
+            "primary": "#000000",
+            "on-primary": "#ffffff",
+            "primary-container": "#141b2b",
+            "on-primary-container": "#7d8497",
+            "inverse-primary": "#c0c6db",
+            "secondary": "#4648d4",
+            "on-secondary": "#ffffff",
+            "secondary-container": "#6063ee",
+            "on-secondary-container": "#fffbff",
+            "secondary-fixed": "#e1e0ff",
+            "secondary-fixed-dim": "#c0c1ff",
+            "on-secondary-fixed": "#07006c",
+            "on-secondary-fixed-variant": "#2f2ebe",
+            "tertiary": "#000000",
+            "on-tertiary": "#ffffff",
+            "tertiary-container": "#001f26",
+            "on-tertiary-container": "#0090a9",
+            "tertiary-fixed": "#acedff",
+            "tertiary-fixed-dim": "#4cd7f6",
+            "on-tertiary-fixed": "#001f26",
+            "on-tertiary-fixed-variant": "#004e5c",
+            "error": "#ba1a1a",
+            "on-error": "#ffffff",
+            "error-container": "#ffdad6",
+            "on-error-container": "#93000a",
+            "background": "#f8f9ff",
+            "on-background": "#0b1c30"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "gutter": "1.5rem",
+            "gutter-mobile": "1rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2rem",
+            "margin": "2rem",
+            "margin-mobile": "1rem"
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            "metric-num": ["Inter", "sans-serif"]
+          },
+          fontSize: {
+            "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.03em", fontWeight: "500" }],
+            "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.025em", fontWeight: "600" }],
+            "body-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.005em", fontWeight: "400" }],
+            "body-md": ["14px", { lineHeight: "20px", letterSpacing: "0em", fontWeight: "400" }],
+            "body-lg": ["16px", { lineHeight: "24px", letterSpacing: "0em", fontWeight: "400" }],
+            "title-md": ["16px", { lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "600" }],
+            "headline-sm": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }],
+            "headline-md": ["24px", { lineHeight: "32px", letterSpacing: "-0.015em", fontWeight: "600" }],
+            "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "headline-lg-mobile": ["26px", { lineHeight: "34px", letterSpacing: "-0.015em", fontWeight: "700" }],
+            "metric-num": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "600" }],
+            "display-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.025em", fontWeight: "700" }]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+
+<body class="bg-surface font-sans text-on-surface antialiased flex flex-col min-h-screen relative selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+
+  <!-- ================= TOP APP HEADER ================= -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur-xl border-b border-surface-container-high/70 shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe">
+    <div class="max-w-7xl mx-auto px-gutter-mobile md:px-gutter flex flex-col justify-between py-2 md:py-2.5">
+      <!-- Main Row -->
+      <div class="flex items-center justify-between gap-space-sm">
+        
+        <!-- Brand & Drawer Trigger -->
+        <div class="flex items-center gap-space-sm min-w-0">
+          <button aria-label="Open Navigation Menu" class="w-10 h-10 flex items-center justify-center rounded-xl text-on-surface hover:bg-surface-container transition-colors shrink-0 cursor-pointer" id="menu-open-btn">
+            <span class="material-symbols-outlined text-[24px]">menu</span>
+          </button>
+          
+          <div class="flex items-center gap-2.5 min-w-0 cursor-pointer" onclick="window.App.switchView('overview')">
+            <div class="w-8 h-8 rounded-xl bg-secondary flex items-center justify-center text-white shrink-0 shadow-sm font-bold">
+              <span class="material-symbols-outlined text-[20px]">analytics</span>
+            </div>
+            <div class="flex flex-col min-w-0">
+              <span class="font-title-md text-title-md text-on-surface font-bold tracking-tight truncate">
+                SalesSaathi
+              </span>
+              <div class="flex items-center gap-1">
+                <span class="inline-flex items-center gap-1 px-2 py-0.2 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[10px] font-semibold truncate max-w-[150px]" id="active-dataframe-name">
+                  <span class="w-1.5 h-1.5 rounded-full bg-secondary shrink-0"></span>
+                  Active: retail_sales_dataset.csv
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Center: Desktop Navigation Bar (Desktop Only) -->
+        <nav class="hidden lg:flex items-center gap-1 bg-surface-container-low p-1 rounded-2xl shadow-inner border border-surface-container-high/60" id="desktop-nav-bar">
+          <a class="px-3.5 py-1.5 rounded-xl bg-primary text-white font-label-md text-label-md font-semibold shadow-sm transition-all" data-path="overview" href="#">
+            Overview
+          </a>
+          <a class="px-3.5 py-1.5 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md transition-all" data-path="analytics" href="#">
+            Analytics
+          </a>
+          <a class="px-3.5 py-1.5 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md transition-all" data-path="segmentation" href="#">
+            Segments (K-Means)
+          </a>
+          <a class="px-3.5 py-1.5 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md transition-all" data-path="intelligence" href="#">
+            RFM Intelligence
+          </a>
+          <a class="px-3.5 py-1.5 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md transition-all" data-path="recommendations" href="#">
+            AI Actions
+          </a>
+          <a class="px-3.5 py-1.5 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md transition-all" data-path="dataset" href="#">
+            Dataset Studio
+          </a>
+        </nav>
+
+        <!-- Right: Notifications & Executive Profile -->
+        <div class="flex items-center gap-space-xs shrink-0">
+          <button aria-label="Notifications" class="w-10 h-10 flex items-center justify-center rounded-xl text-on-surface-variant hover:bg-surface-container transition-colors relative cursor-pointer" onclick="window.App.showToast('You have 4 new AI recommendations for Q3 optimization.')">
+            <span class="material-symbols-outlined text-[22px]">notifications</span>
+            <span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-secondary ring-2 ring-white"></span>
+          </button>
+          
+          <button id="header-profile-trigger" aria-label="Executive Profile & Settings" class="flex items-center gap-2 pl-1 p-1 rounded-xl hover:bg-surface-container transition-colors cursor-pointer group text-left border border-transparent hover:border-surface-container-high/60">
+            <div id="header-user-avatar" class="w-8 h-8 rounded-full bg-secondary text-white flex items-center justify-center font-bold text-[13px] shadow-sm group-hover:scale-105 transition-transform">
+              AM
+            </div>
+            <div class="hidden sm:flex flex-col text-left">
+              <span id="header-user-name" class="font-label-md text-on-surface font-semibold leading-tight flex items-center gap-1">
+                Alex Morgan
+                <span class="material-symbols-outlined text-[13px] text-on-surface-variant group-hover:text-secondary transition-colors">edit</span>
+              </span>
+              <span id="header-user-role" class="font-label-sm text-on-surface-variant text-[10px]">Retail Commercial Executive</span>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Sub-row: Title & Time Filter (Mobile Only) -->
+      <div class="flex lg:hidden items-center justify-between gap-space-sm pt-2 pb-0.5 border-t border-surface-container-high/40 mt-1">
+        <div class="flex items-center gap-space-xs">
+          <span class="font-headline-sm text-headline-sm text-on-surface font-bold truncate" id="header-page-title">
+            Overview
+          </span>
+        </div>
+        <div class="flex items-center bg-surface-container-low rounded-xl p-0.5 shadow-sm">
+          <button class="px-2.5 py-1 rounded-lg text-label-md font-label-md font-semibold text-on-surface hover:bg-white transition-all cursor-pointer" onclick="window.App.setDateFilter('7D')">7D</button>
+          <button class="px-2.5 py-1 rounded-lg text-label-md font-label-md font-semibold text-on-surface bg-white shadow-sm transition-all cursor-pointer" onclick="window.App.setDateFilter('30D')">30D</button>
+          <button class="px-2.5 py-1 rounded-lg text-label-md font-label-md font-semibold text-on-surface hover:bg-white transition-all cursor-pointer" onclick="window.App.setDateFilter('90D')">90D</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= SLIDE-OUT DRAWER ================= -->
+  <div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm transition-opacity opacity-0 pointer-events-none duration-300" id="drawer-backdrop"></div>
+  
+  <aside class="fixed top-0 left-0 bottom-0 z-50 w-80 max-w-[85vw] bg-white shadow-[0_10px_25px_rgba(0,0,0,0.15)] transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col pt-safe pb-safe" id="slide-drawer">
+    <!-- Drawer Header -->
+    <div class="h-16 px-gutter-mobile flex items-center justify-between border-b border-surface-container-high/60">
+      <div class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-xl bg-secondary flex items-center justify-center text-white font-bold">
+          <span class="material-symbols-outlined text-[18px]">analytics</span>
+        </div>
+        <span class="font-title-md text-title-md text-on-surface font-bold">SalesSaathi Hub</span>
+      </div>
+      <button aria-label="Close Drawer" class="w-9 h-9 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container cursor-pointer" id="menu-close-btn">
+        <span class="material-symbols-outlined text-[20px]">close</span>
+      </button>
+    </div>
+
+    <!-- Active Dataframe Tile -->
+    <div class="p-gutter-mobile">
+      <div class="p-3 bg-surface-container-low rounded-2xl flex items-center justify-between border border-surface-container-high/60">
+        <div class="flex flex-col">
+          <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Active Dataframe</span>
+          <span class="font-title-md text-title-md text-on-surface font-bold">retail_sales_dataset.csv</span>
+        </div>
+        <span class="px-2.5 py-1 rounded-full bg-secondary/10 text-secondary font-label-sm text-label-sm font-semibold">
+          Primary
+        </span>
+      </div>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="flex-1 overflow-y-auto px-gutter-mobile py-space-xs flex flex-col gap-1.5">
+      <a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface hover:bg-surface-container transition-colors" data-path="overview" href="#">
+        <span class="material-symbols-outlined text-secondary text-[22px]">dashboard</span>
+        <span class="font-title-md text-title-md">Overview Dashboard</span>
+      </a>
+      <a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface hover:bg-surface-container transition-colors" data-path="analytics" href="#">
+        <span class="material-symbols-outlined text-secondary text-[22px]">insights</span>
+        <span class="font-title-md text-title-md">Sales & Demographics</span>
+      </a>
+      <a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface hover:bg-surface-container transition-colors" data-path="segmentation" href="#">
+        <span class="material-symbols-outlined text-secondary text-[22px]">pie_chart</span>
+        <span class="font-title-md text-title-md">Customer Segmentation</span>
+      </a>
+      <a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface hover:bg-surface-container transition-colors" data-path="intelligence" href="#">
+        <span class="material-symbols-outlined text-secondary text-[22px]">hub</span>
+        <span class="font-title-md text-title-md">RFM Intelligence</span>
+      </a>
+      <a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface hover:bg-surface-container transition-colors" data-path="recommendations" href="#">
+        <span class="material-symbols-outlined text-secondary text-[22px]">auto_awesome</span>
+        <span class="font-title-md text-title-md">AI Recommendations</span>
+      </a>
+      <a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-on-surface hover:bg-surface-container transition-colors" data-path="dataset" href="#">
+        <span class="material-symbols-outlined text-secondary text-[22px]">database</span>
+        <span class="font-title-md text-title-md">Dataset Management</span>
+      </a>
+    </div>
+
+    <!-- Drawer Profile Footer -->
+    <div class="p-gutter-mobile mt-auto border-t border-surface-container-high/60">
+      <div id="drawer-profile-trigger" class="flex items-center justify-between p-2.5 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer group border border-transparent hover:border-secondary/30">
+        <div class="flex items-center gap-3 min-w-0">
+          <div id="drawer-user-avatar" class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center font-bold text-[14px] shrink-0 shadow-sm">
+            AM
+          </div>
+          <div class="flex flex-col min-w-0">
+            <span id="drawer-user-name" class="font-label-md text-label-md text-on-surface font-bold truncate">Alex Morgan</span>
+            <span id="drawer-user-email" class="font-label-sm text-label-sm text-on-surface-variant truncate">alex@salessaathi.ai</span>
+          </div>
+        </div>
+        <div class="w-7 h-7 rounded-lg bg-white flex items-center justify-center text-on-surface-variant group-hover:text-secondary group-hover:bg-secondary/10 transition-colors shrink-0 shadow-xs" title="Edit Profile">
+          <span class="material-symbols-outlined text-[16px]">edit</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ================= MAIN CONTENT AREA ================= -->
+  <main class="flex-1 flex flex-col relative w-full max-w-7xl mx-auto px-gutter-mobile md:px-gutter pt-32 lg:pt-24 pb-28 md:pb-16 bg-surface">
+    <div id="main-content-area" class="w-full">
+      <!-- Dynamically rendered by App.render() -->
+    </div>
+  </main>
+
+  <!-- ================= BOTTOM TAB NAVIGATION (Mobile Only) ================= -->
+  <nav class="lg:hidden fixed bottom-0 inset-x-0 z-40 pb-safe bg-white/95 backdrop-blur-xl border-t border-surface-container-high/60 shadow-[0_-2px_10px_rgba(0,0,0,0.03)]" data-bottom-nav>
+    <div class="flex justify-around items-center h-16 px-2">
+      <a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-12 transition-colors text-secondary font-semibold" data-path="overview" href="#">
+        <span class="material-symbols-outlined text-[22px]">dashboard</span>
+        <span class="font-label-sm text-label-sm">Overview</span>
+      </a>
+      <a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="segmentation" href="#">
+        <span class="material-symbols-outlined text-[22px]">pie_chart</span>
+        <span class="font-label-sm text-label-sm">Segments</span>
+      </a>
+      <a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="analytics" href="#">
+        <span class="material-symbols-outlined text-[22px]">insights</span>
+        <span class="font-label-sm text-label-sm">Analytics</span>
+      </a>
+      <a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="recommendations" href="#">
+        <span class="material-symbols-outlined text-[22px]">auto_awesome</span>
+        <span class="font-label-sm text-label-sm">Actions</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ================= INTERACTIVE MODALS CONTAINER ================= -->
+  <div class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden" id="modal-container">
+    <div class="absolute inset-0 bg-inverse-surface/50 backdrop-blur-sm transition-opacity duration-200 opacity-0 cursor-pointer" id="modal-backdrop"></div>
+    <div class="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl p-5 md:p-6 transform transition-all duration-200 scale-95 opacity-0 z-10 max-h-[90vh] overflow-y-auto border border-surface-container-high" id="modal-content">
+      <!-- Injected by window.App.openModal() -->
+    </div>
+  </div>
+
+  <!-- ================= GLOBAL TOAST NOTIFICATION ================= -->
+  <div class="fixed bottom-20 md:bottom-8 right-4 md:right-8 z-50 flex items-center gap-3 px-4 py-3 rounded-2xl bg-primary-container text-white shadow-xl transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300 border border-white/10" id="toast-notification">
+    <span class="material-symbols-outlined text-[20px] text-emerald-400" id="toast-icon">check_circle</span>
+    <span class="font-body-sm text-body-sm text-white font-medium" id="toast-text">Action completed successfully.</span>
+  </div>
+
+  <!-- ================= SCRIPTS ================= -->
+  <!-- 1. Data Store -->
+  <script src="./data/sample_data.js"></script>
+
+  <!-- 2. Computation & ML Engines -->
+  <script src="./engine/rfm_engine.js"></script>
+  <script src="./engine/kmeans_engine.js"></script>
+  <script src="./engine/analytics_engine.js"></script>
+  <script src="./engine/recommendations_engine.js"></script>
+
+  <!-- 3. Views -->
+  <script src="./components/overview_view.js"></script>
+  <script src="./components/analytics_view.js"></script>
+  <script src="./components/segmentation_view.js"></script>
+  <script src="./components/intelligence_view.js"></script>
+  <script src="./components/recommendations_view.js"></script>
+  <script src="./components/dataset_view.js"></script>
+
+  <!-- 4. Orchestrator Application -->
+  <script src="./app.js"></script>
+</body>
+</html>

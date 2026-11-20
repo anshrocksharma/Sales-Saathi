@@ -1,0 +1,26 @@
+Transaction_ID,Date,Customer_ID,Customer_Name,Gender,Age,Product_Category,Quantity,Price_Per_Unit,Total_Amount,City
+TX-98421,2023-12-30,CUST-8491,Priya Sharma,Female,32,Electronics,1,4500,4500,Bengaluru
+TX-98422,2023-12-30,CUST-7741,Ananya Desai,Female,29,Clothing,3,1200,3600,Delhi
+TX-98423,2023-12-29,CUST-6399,Amitabh Sen,Male,42,Food & Gourmet,2,450,900,Kolkata
+TX-98424,2023-12-29,CUST-6240,Deepa Nair,Female,33,Beauty & Wellness,2,850,1700,Mumbai
+TX-98425,2023-12-28,CUST-4102,Arjun Bansal,Male,24,Electronics,1,1899,1899,Delhi
+TX-98426,2023-12-28,CUST-4322,Tanvi Saxena,Female,26,Beauty & Wellness,1,1250,1250,Bengaluru
+TX-98427,2023-12-27,CUST-4819,Manish Tiwari,Male,29,Home & Living,1,748,748,Jaipur
+TX-98428,2023-12-27,CUST-8219,Rohan Mehra,Male,35,Electronics,2,3200,6400,Bengaluru
+TX-98429,2023-12-26,CUST-9102,Vikram Rathore,Male,38,Clothing,2,1850,3700,Mumbai
+TX-98430,2023-12-26,CUST-9430,Kavita Reddy,Female,31,Beauty & Wellness,3,920,2760,Hyderabad
+TX-98431,2023-12-25,CUST-8671,Siddharth Sen,Male,40,Electronics,1,8500,8500,Pune
+TX-98432,2023-12-25,CUST-9024,Natasha Roy,Female,27,Clothing,4,950,3800,Mumbai
+TX-98433,2023-12-24,CUST-6112,Rajesh Iyer,Male,44,Food & Gourmet,3,620,1860,Bengaluru
+TX-98434,2023-12-24,CUST-6580,Karan Patel,Male,37,Clothing,2,1450,2900,Ahmedabad
+TX-98435,2023-12-23,CUST-6710,Shweta Verma,Female,30,Beauty & Wellness,2,1100,2200,Delhi
+TX-98436,2023-12-23,CUST-4501,Nikhil Joshi,Male,34,Food & Gourmet,4,350,1400,Pune
+TX-98437,2023-12-22,CUST-4670,Pooja Hegde,Female,25,Clothing,1,2150,2150,Hyderabad
+TX-98438,2023-12-22,CUST-2101,Sunil Grover,Male,52,Electronics,1,4800,4800,Delhi
+TX-98439,2023-12-21,CUST-2234,Ritika Malhan,Female,41,Clothing,2,1800,3600,Mumbai
+TX-98440,2023-12-21,CUST-2390,Harish Pillai,Male,48,Food & Gourmet,3,550,1650,Chennai
+TX-98441,2023-12-20,CUST-2415,Divya Chauhan,Female,39,Beauty & Wellness,2,950,1900,Bengaluru
+TX-98442,2023-12-20,CUST-8491,Priya Sharma,Female,32,Electronics,2,6200,12400,Bengaluru
+TX-98443,2023-12-19,CUST-9102,Vikram Rathore,Male,38,Electronics,1,12500,12500,Mumbai
+TX-98444,2023-12-19,CUST-7741,Ananya Desai,Female,29,Clothing,2,2400,4800,Delhi
+TX-98445,2023-12-18,CUST-6399,Amitabh Sen,Male,42,Electronics,1,3400,3400,Kolkata
